@@ -1,0 +1,312 @@
+@import url('modern-normalize.css');
+
+:root {
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: clamp(1rem, 0.75rem + 1.5vw, 1.5rem);
+}
+
+h1, h2, h3, h4, h5, figure, p, ol, ul {
+  margin: 0;
+}
+
+ol[role="list"], ul[role="list"] {
+  list-style: none;
+  padding-inline: 0;
+}
+
+h1, h2, h3, h4, h5 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+img {
+  display: block;
+  max-inline-size: 100%;
+}
+
+/* END TEMPLATE */
+
+:root {
+    --color-one: #2d3436;
+    --color-two: #ddd6fe;
+    --color-three: #ac65e7;
+    --color-four: #a29bfe;
+    --color-five: #636e72;
+    --color-six: #fd79a8;
+    --color-seven: #fdcb6e;
+    --color-eight: #f5f3e9;
+    --color-nine: #e8dcc6;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background: linear-gradient(135deg, var(--color-eight) 0%, var(--color-nine) 100%);
+    color: var(--color-one);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#homeContent {
+    display: grid;
+}
+
+#menuContent {
+    display: none;
+}
+
+#aboutContent {
+    display: none;
+}
+
+header {
+    display: flex;
+    align-content: space-between;
+    background: linear-gradient(160deg, var(--color-four), var(--color-six));
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+header button {
+    font-size: 1.5rem;
+    background-color: var(--color-eight);
+    color: var(--color-five);
+    font-family: brush'Brush Script MT', cursive, system-ui;
+    border-radius: 15px;
+    border: groove var(--color-five) 2px;
+}
+
+header button:hover {
+    font-weight: 600;
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    margin-bottom: 0.5rem;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><rect fill="%23ddd6fe" width="1200" height="400"/><circle fill="%23a78bfa" cx="300" cy="100" r="50" opacity="0.3"/><circle fill="%23c084fc" cx="800" cy="300" r="70" opacity="0.3"/><circle fill="%23e879f9" cx="1000" cy="150" r="40" opacity="0.3"/></svg>');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    margin-left: -10%;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero p {
+    font-size: 1.3rem;
+    max-width: 600px;
+}
+
+.section {
+    padding: 3rem 0;
+    margin: 2rem 0;
+}
+
+.section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--color-three);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.menu-category {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    border: 3px solid var(--color-two);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+}
+
+.menu-category h3 {
+    color: var(--color-three);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    border-bottom: 2px solid var(--color-two);
+    padding-bottom: 0.5rem;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px dotted var(--color-two);
+}
+
+.menu-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.item-info {
+    flex: 1;
+    margin-right: 1rem;
+}
+
+.item-name {
+    font-weight: bold;
+    color: var(--color-one);
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+}
+
+.item-description {
+    font-size: 0.9rem;
+    color: var(--color-five);
+    font-style: italic;
+    line-height: 1.4;
+}
+
+.item-price {
+    font-weight: bold;
+    color: var(--color-three);
+    font-size: 1.1rem;
+    white-space: nowrap;
+}
+
+.info-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    border: 3px solid var(--color-two);
+    margin-bottom: 2rem;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.info-card h3 {
+    color: var(--color-three);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--color-two);
+    padding-bottom: 0.5rem;
+}
+
+.hours-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;        
+}
+
+.hours-table td {
+    padding: 0.5rem;
+    border-bottom: 1px solid var(--color-two);
+}
+
+.hours-table td:first-child {
+    font-weight: bold;
+    color: var(--color-three);
+}
+
+footer {
+    background: var(--color-one);
+    color: white;
+    text-align: center;
+    font-size: .6rem;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+footer .container {
+    display: grid;
+}
+
+footer #bio {
+    text-align: right;
+    align-self: end;
+}
+
+footer a {
+    color: var(--color-two);
+}
+
+footer a:visited {
+    color: var(--color-two);
+}
+
+footer a:hover {
+    color: var(--color-two);
+    font-weight: 600;
+}
+
+.special-note {
+    background: linear-gradient(45deg, var(--color-six), var(--color-seven));
+    color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    margin: 2rem 0;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 768px) {
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+            
+    .logo {
+        font-size: 2rem;
+    }
+            
+    .hero h2 {
+        font-size: 2rem;
+    }
+            
+    .hero p {
+        font-size: 1.1rem;
+    }
+}
